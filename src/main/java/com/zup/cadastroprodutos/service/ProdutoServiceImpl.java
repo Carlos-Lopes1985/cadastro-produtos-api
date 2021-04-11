@@ -20,7 +20,6 @@ public class ProdutoServiceImpl implements ProdutoService {
 		if(produto == null) {
 			 throw new ObjectNotFoundException("Produto não pode ser nulo ou vazio");
 		}
-		
 		return produtoRepository.save(produto);
 	}
 
