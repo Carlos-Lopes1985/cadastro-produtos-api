@@ -2,7 +2,6 @@ package com.zup.cadastroprodutos.entity;
 
 import java.io.Serializable;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +17,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Produto implements Serializable {/**
+public class Produto implements Serializable {
+	
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -30,5 +31,9 @@ public class Produto implements Serializable {/**
 	private String categoria;
 	private Double preco;
 	private Integer qtdEstoque;
-
+	
+	public Produto() {
+		super();
+	}
+	
 }

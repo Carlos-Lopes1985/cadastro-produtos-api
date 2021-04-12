@@ -1,5 +1,7 @@
 package com.zup.cadastroprodutos.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,12 @@ public class ProdutoServiceImpl implements ProdutoService {
 			 throw new ObjectNotFoundException("Produto não pode ser nulo ou vazio");
 		}
 		return produtoRepository.save(produto);
+	}
+
+	@Override
+	public List<Produto> buscarTodosProdutos() {
+		
+		return produtoRepository.findAll();
 	}
 
 }

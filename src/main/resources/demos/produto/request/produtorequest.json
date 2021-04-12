@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Produto",
+    "description": "A product from the catalog",
+    "type": "object",
+    "properties": {
+        "nome": {
+            "description": "Name of the product",
+            "type": "string"
+        },
+        "preco": {
+            "type": "number",
+            "minimum": 1,
+            "exclusiveMinimum": true
+        }
+    },
+    "required": ["nome","preco"]
+}
